@@ -159,7 +159,7 @@ public class Pizza {
         System.out.println("Média de vendas: "+soma/cont);
     }
 
-    //Aqui o erro
+    
     public void Venda(){
         
         Atual = inicio;
