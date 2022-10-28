@@ -161,33 +161,31 @@ public class Pizza {
 
     //Aqui o erro
     public void Venda(){
-       
+        
         Atual = inicio;
-        int cont = 0;
+        String maisVendida = null, menosVendida = null;
         int minimo = 0;
         int maximo = 0;
-        
+        minimo = Atual.qt;
+        maximo = Atual.qt;
         while (Atual != null) {
-            if (cont == 0) {
-                minimo = Atual.qt;
+            
+          
+            
+            if (this.Atual.qt > maximo) {
                 maximo = Atual.qt;
-                System.out.println(maximo+"  "+minimo);
+                maisVendida = Atual.nome;
             }
-            cont++;
+            if (this.Atual.qt < minimo) {
+                minimo = Atual.qt;
+                menosVendida = Atual.nome;
+            }
+            
             Atual = Atual.proximo;
             
-            if (Atual.qt > maximo) {
-                maximo = Atual.qt;
-            }
-            if (Atual.qt < minimo) {
-                minimo = Atual.qt;
-            }
-            
-            
-            
         }
-        System.out.println("Pizza mais vendida: "+maximo);
-        System.out.println("Pizza menos Vendida: "+minimo);
+        System.out.println("Pizza mais vendida: "+maisVendida+" | "+maximo);
+        System.out.println("Pizza menos Vendida: "+menosVendida+" | "+minimo);
     }
 
     
